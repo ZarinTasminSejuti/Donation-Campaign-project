@@ -1,10 +1,9 @@
 import { Outlet } from "react-router-dom";
 
-
 const MainLayout = () => {
     return (
         <div>
-            <header className="flex justify-between items-center px-24 shadow-md py-12">
+            <header className="flex justify-between items-center px-24 py-12">
                 <div className="">
                     <img src="./src/images/Logo.png" alt="" />
                 </div>
