@@ -1,6 +1,6 @@
-
+import { ToastContainer, toast } from 'react-toastify';
 import { useLoaderData, useParams } from "react-router-dom";
-// import Card from "../../components/Cards/Card";
+
 
 const DonationDetails = () => {
 
@@ -12,14 +12,17 @@ const DonationDetails = () => {
 
     const backgroundImageUrl = "url(" + (findCard.image) + ")";
 
-  
-   
 
     return (
         <div className="">
-            <div className="bg-cover bg-no-repeat w-full h-[600px] rounded-lg mx-auto" style={{backgroundImage: backgroundImageUrl}}><button className="btn btn-primary">Donate</button>
-                <div className="hero-overlay h-20 bg-black bg-opacity-60"></div>
+            <div className="bg-cover relative bg-no-repeat w-full h-[600px] rounded-lg mx-auto" style={{ backgroundImage: backgroundImageUrl }}>
+                
+                <button style={{ backgroundColor: findCard.card_bg, color: findCard.text_color }} className=" px-7 py-4 rounded absolute bottom-9 left-9 z-10 text-white border-none normal-case">Donate ${findCard.price}</button>
+                
+                <div className="absolute bottom-0 hero-overlay h-32 bg-black bg-opacity-60"></div>
             </div>
+
+
             <div>
                 <h1 className="font-bold text-5xl mt-14 mb-7">{findCard.title}</h1>
                 <p className="leading-8 text-justify mb-14 text-slate-500 font-normal text-base">{findCard.description}</p>
