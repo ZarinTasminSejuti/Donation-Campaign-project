@@ -20,15 +20,26 @@ const DonationDetails = () => {
         // console.log(addedDonatesArray);
         const myDonateData = JSON.parse(localStorage.getItem('donateData'));
 
+        //adding data in localStorage
+
         if (!myDonateData) {
             addedDonatesArray.push(findCard);
             localStorage.setItem('donateData', JSON.stringify(addedDonatesArray));
             toast("Thank You for Donating us!");
 
         } else {
-            addedDonatesArray.push(...myDonateData, findCard)
-            localStorage.setItem('donateData', JSON.stringify(addedDonatesArray))
-            toast("Thank You for Donating us!");
+
+            const isExist = myDonateData.find((card) => card.id === parseInt(id));
+
+            if (!isExist) {
+                addedDonatesArray.push(...myDonateData, findCard)
+                localStorage.setItem('donateData', JSON.stringify(addedDonatesArray));
+                toast("Thank You for Donating us!");
+            } else {
+                toast("You cant donate more");
+            }
+
+            
         }
     }
 
