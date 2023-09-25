@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({card}) => {
 
-    const { title, image, category_name, category_bg, text_color, card_bg } = card || {}
+    const { id, title, image, category_name, category_bg, text_color, card_bg } = card || {}
     
     return (
         <div>
@@ -22,6 +22,7 @@ const Card = ({card}) => {
         </div>
     );
 };
+
 
 
 Card.propTypes = {
