@@ -5,9 +5,9 @@ const Navbar = () => {
     return (
         <div>
             <header className="flex justify-between items-center px-12 py-9"> 
-                <div className="">
-                    <img src="./src/images/Logo.png" alt="" />
-                </div>
+                
+                    <img src="./src/images/Logo.png" alt="logo" />
+               
                 
                 <nav>
                     <ul className="flex gap-12 text-lg font-normal">
