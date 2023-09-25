@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import Donation from "../Donation/Donation";
-import Homes from "../Home/Homes";
+import Donation from "../pages/Donation/Donation";
+import Homes from "../pages/Home/Homes";
 import MainLayout from "../layouts/MainLayout";
+import Statistics from "../pages/Statistics/Statistics";
 
 const newRoute = createBrowserRouter([
     {
@@ -9,7 +10,7 @@ const newRoute = createBrowserRouter([
       element: <MainLayout></MainLayout>,
       children: [
           {
-              path: "/Homes",
+              path: "/",
               element: <Homes></Homes>
           },
         {
@@ -18,7 +19,7 @@ const newRoute = createBrowserRouter([
         },
         {
           path: "/Statistics",
-          element: <div>Statistics Page</div>
+          element: <Statistics></Statistics>
         }
       ]
   }])
