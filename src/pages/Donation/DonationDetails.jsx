@@ -43,7 +43,7 @@ const DonationDetails = () => {
     }
 
     return (
-        <div>
+        <div className="max-w-[1300px] mx-auto">
             {/* Donate Details of particular data section */}
             <div className="bg-cover mt-10 relative bg-no-repeat w-full h-[600px] rounded-lg mx-auto" style={{ backgroundImage: backgroundImageUrl }}>
 

@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Donation from "../pages/Donation/Donation";
 import Home from "../pages/Home/Home";
-import MainLayout from "../layouts/MainLayout";
+//import MainLayout from "../layouts/MainLayout";
 import Statistics from "../pages/Statistics/Statistics";
 import DonationDetails from "../pages/Donation/DonationDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
@@ -9,7 +9,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 const newRoute = createBrowserRouter([
     {
       path: "/",
-      element: <MainLayout></MainLayout>,
+      
       errorElement: <ErrorPage></ErrorPage>,
       children: [
           {
@@ -18,16 +18,16 @@ const newRoute = createBrowserRouter([
               loader: ()=> fetch('/data.json')
           },
           {
-            path: "/Donation",
+            path: "Donation",
             element: <Donation></Donation>
           },
           {
-            path: "/Statistics",
+            path: "Statistics",
             element: <Statistics></Statistics>,
             loader: ()=> fetch('/data.json')
           },
           {
-            path: "/cards/:id",
+            path: "cards/:id",
             element: <DonationDetails></DonationDetails>,
             loader: ()=> fetch('/data.json')
           }

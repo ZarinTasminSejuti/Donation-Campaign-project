@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { PieChart, Pie, Cell } from "recharts";
-import Navbar from "../../components/Header/Navbar";
 
  
 const COLORS = [ "#FF444A", "#00C49F"];
@@ -58,9 +57,6 @@ const Statistics = () => {
         myChart += chart.price;
     });
 
-
-
-
     const data = [
         { name: 'Total Donation', value: totalPrice },
         { name: 'My Total Chart', value: myChart },
@@ -69,11 +65,8 @@ const Statistics = () => {
 
 
     return (
-        <div className="flex flex-col items-center max-w-[1300px]">
-                          
-
+        <div className="flex flex-col items-center max-w-[1300px] mx-auto">
             <div>
-            <Navbar></Navbar>
                 <PieChart width={1300} height={500}>
                     <Pie
                         data={data}
