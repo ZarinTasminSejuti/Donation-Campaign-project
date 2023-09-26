@@ -12,18 +12,20 @@ import bgImage from "/src/images/banner.jpeg";
 const Home = () => {
 
     const [search, setSearch] = useState("");
- 
     const cards = useLoaderData();
 
 
     return (
         <div>
-            <div className="h-[500px] w-full bg-center bg-cover" style={{backgroundImage: 
+            <div className="h-[500px] relative w-full bg-center bg-cover" style={{backgroundImage: 
                 `url(${bgImage})`
             }}>
+        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-80"></div>
                 
-                <MainLayout></MainLayout>
-                <BannerCard setSearch={setSearch}></BannerCard> 
+        <div className="relative z-10">
+          <MainLayout></MainLayout>
+          <BannerCard setSearch={setSearch}></BannerCard>
+        </div>
             </div>
           
            
