@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Navbar from '../../components/Header/Navbar';
 
 const Donation = () => {
     const [datas, setDatas] = useState([]);
@@ -20,6 +21,7 @@ const Donation = () => {
     
     return (
         <div>
+              <Navbar></Navbar>
             {noFound ? <p className="text-2xl md:text-3xl lg:text-4xl font-bold  text-gray-400 text-center mt-48">{noFound}</p> :
                 
             //Donated data display section

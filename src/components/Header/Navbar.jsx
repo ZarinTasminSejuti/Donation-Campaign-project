@@ -7,7 +7,6 @@ const Navbar = () => {
                 
                     <img src="https://i.ibb.co/rG1DBC0/Logo.png" alt="logo" />
                
-                
                 <nav>
                     <ul className="flex gap-12 text-lg font-normal">
                         <li>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { PieChart, Pie, Cell } from "recharts";
+import Navbar from "../../components/Header/Navbar";
 
  
 const COLORS = [ "#FF444A", "#00C49F"];
@@ -33,7 +34,7 @@ const renderCustomizedLabel = ({
 };
 
 
-
+// pie chart calculation
 const Statistics = () => {
 
     let totalPrice = 0;
@@ -68,29 +69,30 @@ const Statistics = () => {
 
 
     return (
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center max-w-[1300px]">
+                          
 
             <div>
-            <PieChart width={1300} height={500}>
-      <Pie
-        data={data}
-        cx={630}
-        cy={250}
-        labelLine={false}
-        label={renderCustomizedLabel}
-        outerRadius={200}
-        dataKey="value"
-      >
-        {data.map((entry, index) => (
-          <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-        ))}
-      </Pie>
-            </PieChart>
+            <Navbar></Navbar>
+                <PieChart width={1300} height={500}>
+                    <Pie
+                        data={data}
+                        cx={630}
+                        cy={250}
+                        labelLine={false}
+                        label={renderCustomizedLabel}
+                        outerRadius={200}
+                        dataKey="value"
+                    >
+                        {data.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                        ))}
+                    </Pie>
+                </PieChart>
             </div>
            
-            
-
-
+   
+            {/* donation bar */}
             <div className="flex items-center mt-7">
             <p>Total Donation</p>
                 <span className="bg-[#FF444A] w-24 h-3 rounded-sm mr-8 ml-3"></span>
