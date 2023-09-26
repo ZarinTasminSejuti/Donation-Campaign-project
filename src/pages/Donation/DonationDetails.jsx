@@ -2,6 +2,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
 import swal from 'sweetalert';
+import MainLayout from '../../layouts/MainLayout';
 
 
 const DonationDetails = () => {
@@ -44,6 +45,7 @@ const DonationDetails = () => {
 
     return (
         <div className="max-w-[1300px] mx-auto">
+            <MainLayout></MainLayout>
             {/* Donate Details of particular data section */}
             <div className="bg-cover mt-10 relative bg-no-repeat w-full h-[600px] rounded-lg mx-auto" style={{ backgroundImage: backgroundImageUrl }}>
 

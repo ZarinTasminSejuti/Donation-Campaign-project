@@ -5,8 +5,8 @@ import { useLoaderData } from 'react-router-dom';
 import BannerCard from '../../components/Banner/BannerCard';
 import Cards from '../../components/Cards/Cards';
 import MainLayout from '../../layouts/MainLayout';
-import bgImage from "../../../public/images/banner.jpeg";
-//import Navbar from '../../components/Header/Navbar';
+import bgImage from "/src/images/banner.jpeg";
+
 
 
 const Home = () => {

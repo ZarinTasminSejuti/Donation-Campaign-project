@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { PieChart, Pie, Cell } from "recharts";
+import MainLayout from '../../layouts/MainLayout';
 
  
 const COLORS = [ "#FF444A", "#00C49F"];
@@ -66,7 +67,9 @@ const Statistics = () => {
 
     return (
         <div className="flex flex-col items-center max-w-[1300px] mx-auto">
+       
             <div>
+            <MainLayout></MainLayout>
                 <PieChart width={1300} height={500}>
                     <Pie
                         data={data}
