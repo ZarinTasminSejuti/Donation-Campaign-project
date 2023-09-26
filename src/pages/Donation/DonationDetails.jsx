@@ -1,6 +1,7 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
+import swal from 'sweetalert';
 
 
 const DonationDetails = () => {
@@ -36,15 +37,14 @@ const DonationDetails = () => {
                 localStorage.setItem('donateData', JSON.stringify(addedDonatesArray));
                 toast("Thank You for Donating us!");
             } else {
-                toast("You cant donate more");
+                swal("Already Donated!", "You Can't Donate More!", "error");
             }
-
-            
         }
     }
 
     return (
         <div>
+            {/* Donate Details of particular data section */}
             <div className="bg-cover relative bg-no-repeat w-full h-[600px] rounded-lg mx-auto" style={{ backgroundImage: backgroundImageUrl }}>
 
                 <button style={{ backgroundColor: findCard.card_bg, color: findCard.text_color }} className=" px-7 py-4 rounded absolute bottom-9 left-9 z-10 text-white border-none normal-case" onClick={handleDonate} >Donate ${findCard.price}</button>

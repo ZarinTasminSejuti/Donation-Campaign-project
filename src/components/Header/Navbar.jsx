@@ -1,12 +1,11 @@
 import { NavLink } from "react-router-dom";
 
-
 const Navbar = () => {
     return (
         <div>
             <header className="flex justify-between items-center px-12 py-9"> 
                 
-                    <img src="./src/images/Logo.png" alt="logo" />
+                    <img src="https://i.ibb.co/rG1DBC0/Logo.png" alt="logo" />
                
                 
                 <nav>
