@@ -77,7 +77,7 @@ const Donation = () => {
                     
                     {/* See All Button Section */}
                     {
-                        !isSeeAll && (
+                        datas.length >4 && !isSeeAll && (
                             <button onClick={()=> setSeeButton(true)} className='px-7 py-3 my-16 text-lg rounded-lg block shadow-md font-semibold text-white mx-auto bg-green-700'>See All</button>
                     )}  
                 </div> 
