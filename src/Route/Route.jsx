@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Donation from "../pages/Donation/Donation";
 import Home from "../pages/Home/Home";
-//import MainLayout from "../layouts/MainLayout";
 import Statistics from "../pages/Statistics/Statistics";
 import DonationDetails from "../pages/Donation/DonationDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
