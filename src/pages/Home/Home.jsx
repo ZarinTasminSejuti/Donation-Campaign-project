@@ -27,6 +27,7 @@ const Home = () => {
             </div>
                     
             <Cards cards={cards} search={search}></Cards>
+            
         </div>
     );
 };

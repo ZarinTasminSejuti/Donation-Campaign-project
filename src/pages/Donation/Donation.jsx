@@ -46,7 +46,7 @@ const Donation = () => {
                                         <h2 className='font-semibold text-xl md:text-2xl lg:text-2xl my-2 text-black'>{data.title}</h2>
                                         <p className='mb-3 md:text-xl' style={{ color: data.text_color }}>${data.price}</p>
                                         
-                                        <button className='text-white w-fit rounded-md px-4 py-0 md:py-2 lg:py-2 mb-2' style={{ backgroundColor: data.button_background }}>View Details</button>
+                                        <button className='text-white w-fit rounded lg:rounded-md px-4 py-0 md:py-2 lg:py-2 mb-2' style={{ backgroundColor: data.button_background }}>View Details</button>
                                     </div>                            
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ const Donation = () => {
                                             <h2 className='font-semibold text-xl md:text-2xl lg:text-2xl my-2 text-black'>{data.title}</h2>
                                             <p className='mb-3 md:text-xl' style={{ color: data.text_color }}>${data.price}</p>
                                             
-                                            <button className='text-white w-fit rounded-md px-4 py-0 md:py-2 lg:py-2 mb-2' style={{ backgroundColor: data.button_background }}>View Details</button>
+                                            <button className='text-white w-fit rounded lg:rounded-md px-4 py-0 md:py-2 lg:py-2 mb-2' style={{ backgroundColor: data.button_background }}>View Details</button>
                                         </div>                            
                                     </div>
                                 </div>

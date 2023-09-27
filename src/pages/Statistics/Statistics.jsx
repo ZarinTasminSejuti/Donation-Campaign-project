@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import MainLayout from '../../layouts/MainLayout';
 
  
@@ -14,7 +14,8 @@ const renderCustomizedLabel = ({
                 midAngle,
                 innerRadius,
                 outerRadius,
-                percent,
+    percent,
+                
                 }) => {
                 const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
                 const x = cx + radius * Math.cos(-midAngle * RADIAN);
@@ -64,37 +65,29 @@ const Statistics = () => {
     ];
 
 
-
     return (
-        <div className="flex flex-col items-center max-w-[1300px] mx-auto">
-       
-            <div>
-                <MainLayout></MainLayout>
-                
-                <PieChart className="w-full sm:w-1/2 md:w-2/3" width={1300} height={500}>
-                    <Pie
-                        data={data}
-                        cx={630}
-                        cy={250}
-                        labelLine={false}
-                        label={renderCustomizedLabel}
-                        outerRadius={200}
-                        dataKey="value"
-                    >
+        <div className="max-w-[1300px] mx-auto p-3 lg:p-0">
+            <MainLayout></MainLayout>
+            <div style={{ width: '100%', height: 500 }}>
+                <ResponsiveContainer>
+                    <PieChart>
+                        <Pie dataKey="value" data={data} labelLine={false} label={renderCustomizedLabel} outerRadius={180}>
+                                    
                         {data.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
-                    </Pie>
-                </PieChart>
+                            </Pie>
+                    </PieChart>
+                </ResponsiveContainer>
             </div>
            
    
             {/* donation bar */}
-            <div className="flex items-center mt-7 md:mb-5">
+            <div className="flex items-center justify-center mt-7 md:mb-5">
                 <p>Total Donation</p>
-                <span className="bg-[#FF444A] w-24 h-3 rounded-sm mr-8 md:ml-3"></span>
+                <span className="bg-[#FF444A] w-12 lg:w-24 h-3 rounded-sm mr-8 ml-3"></span>
                 <p>Your Donation</p>
-                <span className="bg-[#00C49F] w-24 h-3 rounded-sm md:ml-3 "></span>
+                <span className="bg-[#00C49F] w-12 lg:w-24 h-3 rounded-sm ml-3 "></span>
                 
             </div>
         </div>

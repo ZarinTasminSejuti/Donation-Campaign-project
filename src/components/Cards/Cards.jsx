@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import {  useEffect, useState } from 'react';
- import Card from './Card';
+import Card from './Card';
+import swal from 'sweetalert';
 
 const Cards = ({ cards, search }) => {
     const [searchedValue, setSearchedValue] = useState([]);
@@ -9,10 +10,17 @@ const Cards = ({ cards, search }) => {
     useEffect(() => {
         const filterCards = () => {
             if (search) {
-            const searchedValueFiltered = cards.filter((element) =>
-                element.category_name.toLowerCase() === search.toLowerCase()
-            );
-            setSearchedValue(searchedValueFiltered);
+                const searchedValueFiltered = cards.filter((element) =>
+                    element.category_name.toLowerCase() === search.toLowerCase()
+                    
+                );
+                console.log(typeof searchedValueFiltered);
+                if (searchedValueFiltered.length === 0) {
+                    swal("Error!", "Category did not match", "error");
+                } else {
+                    setSearchedValue(searchedValueFiltered);
+                }
+           
             } else {
             setSearchedValue(cards);
             }
