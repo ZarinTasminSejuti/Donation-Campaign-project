@@ -20,7 +20,7 @@ const Donation = () => {
     
     
     return (
-        <div className="max-w-[1300px] mx-auto">
+        <div className="max-w-[1300px] mx-auto p-3 lg:p-0">
             <MainLayout></MainLayout>
             {noFound ? <p className="text-2xl md:text-3xl lg:text-4xl font-bold  text-gray-400 text-center mt-48">{noFound}</p> :
                 
@@ -35,18 +35,18 @@ const Donation = () => {
 
                                 <div style={{ backgroundColor: data.card_bg }} className="flex shadow-md items-center rounded-lg h-full">
                                                     
-                                    <img className='h-[200px] w-2/5' src={data.image} alt="" />
+                                    <img className='h-full w-2/5 rounded-lg' src={data.image} alt="" />
                             
                                     <div className='flex flex-col ml-6'>
 
-                                        <div style={{ backgroundColor: data.category_bg }} className="rounded-md w-fit px-3 py-2">
+                                        <div style={{ backgroundColor: data.category_bg }} className="rounded-md w-fit px-3 py-0 md:py-2 lg:py-2 mt-2">
                                             <p style={{ color: data.text_color}} className='font-medium text-sm'>{data.category_name}</p>
                                         </div>
 
-                                        <h2 className='font-semibold text-2xl my-2 text-black'>{data.title}</h2>
-                                        <p className='mb-3' style={{ color: data.text_color }}>${data.price}</p>
+                                        <h2 className='font-semibold text-xl md:text-2xl lg:text-2xl my-2 text-black'>{data.title}</h2>
+                                        <p className='mb-3 md:text-xl' style={{ color: data.text_color }}>${data.price}</p>
                                         
-                                        <button className='text-white w-fit rounded-md px-4 py-2' style={{ backgroundColor: data.button_background }}>View Details</button>
+                                        <button className='text-white w-fit rounded-md px-4 py-0 md:py-2 lg:py-2 mb-2' style={{ backgroundColor: data.button_background }}>View Details</button>
                                     </div>                            
                                 </div>
                             </div>
@@ -57,18 +57,18 @@ const Donation = () => {
         
                                     <div style={{ backgroundColor: data.card_bg }} className="flex shadow-md items-center rounded-lg h-full">
                                                         
-                                        <img className='h-[200px] w-2/5' src={data.image} alt="" />
+                                        <img className='h-full w-2/5 rounded-lg' src={data.image} alt="" />
                                 
                                         <div className='flex flex-col ml-6'>
         
-                                            <div style={{ backgroundColor: data.category_bg }} className="rounded-md w-fit px-3 py-2">
+                                            <div style={{ backgroundColor: data.category_bg }} className="rounded-md w-fit px-3 py-0 md:py-2 lg:py-2 mt-2">
                                                 <p style={{ color: data.text_color}} className='font-medium text-sm'>{data.category_name}</p>
                                             </div>
         
-                                            <h2 className='font-semibold text-2xl my-2 text-black'>{data.title}</h2>
-                                            <p className='mb-3' style={{ color: data.text_color }}>${data.price}</p>
+                                            <h2 className='font-semibold text-xl md:text-2xl lg:text-2xl my-2 text-black'>{data.title}</h2>
+                                            <p className='mb-3 md:text-xl' style={{ color: data.text_color }}>${data.price}</p>
                                             
-                                            <button className='text-white w-fit rounded-md px-4 py-2' style={{ backgroundColor: data.button_background }}>View Details</button>
+                                            <button className='text-white w-fit rounded-md px-4 py-0 md:py-2 lg:py-2 mb-2' style={{ backgroundColor: data.button_background }}>View Details</button>
                                         </div>                            
                                     </div>
                                 </div>

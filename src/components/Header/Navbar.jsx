@@ -5,14 +5,14 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
     return (
         <div >
-            <header className="max-w-[1300px] mx-auto flex justify-between items-center px-12 py-5"> 
+            <header className="max-w-[1300px] mx-auto flex flex-col lg:flex-row  justify-between items-center px-12 py-5"> 
                 
                     <img src="https://i.ibb.co/rG1DBC0/Logo.png" alt="logo" />
                
                 <nav>
-                    <ul className="flex gap-12 text-lg font-normal">
+                    <ul className="flex gap-12 mt-12 lg:mt-0 text-lg font-normal">
                         <li>
-                            <NavLink
+                            <NavLink 
                                 to="/"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-red-600 font-bold underline" : ""

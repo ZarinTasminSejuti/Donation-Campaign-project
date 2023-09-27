@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <div>
-            <div className="h-[550px] relative w-full bg-center bg-cover" style={{backgroundImage: 
+            <div className="md:h-[500px] lg:h-[550px] relative w-full bg-center bg-cover" style={{backgroundImage: 
                     `url(${bgImage})`
                 }}>
                 <div className="absolute top-0 left-0 w-full h-full bg-white opacity-90"></div>

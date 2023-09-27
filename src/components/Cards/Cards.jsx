@@ -24,7 +24,7 @@ const Cards = ({ cards, search }) => {
 
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 my-24 max-w-[1300px] mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 my-16 lg:my-24 max-w-[1300px] mx-auto p-3 lg:p-0'>
             {
                 searchedValue?.map(card => <Card key={card.id} card={card}></Card>)
             }

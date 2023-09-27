@@ -69,8 +69,9 @@ const Statistics = () => {
         <div className="flex flex-col items-center max-w-[1300px] mx-auto">
        
             <div>
-            <MainLayout></MainLayout>
-                <PieChart width={1300} height={500}>
+                <MainLayout></MainLayout>
+                
+                <PieChart className="w-full sm:w-1/2 md:w-2/3" width={1300} height={500}>
                     <Pie
                         data={data}
                         cx={630}
@@ -89,11 +90,11 @@ const Statistics = () => {
            
    
             {/* donation bar */}
-            <div className="flex items-center mt-7">
-            <p>Total Donation</p>
-                <span className="bg-[#FF444A] w-24 h-3 rounded-sm mr-8 ml-3"></span>
+            <div className="flex items-center mt-7 md:mb-5">
+                <p>Total Donation</p>
+                <span className="bg-[#FF444A] w-24 h-3 rounded-sm mr-8 md:ml-3"></span>
                 <p>Your Donation</p>
-                <span className="bg-[#00C49F] w-24 h-3 rounded-sm ml-3 "></span>
+                <span className="bg-[#00C49F] w-24 h-3 rounded-sm md:ml-3 "></span>
                 
             </div>
         </div>
