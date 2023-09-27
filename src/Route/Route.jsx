@@ -6,29 +6,30 @@ import Statistics from "../pages/Statistics/Statistics";
 import DonationDetails from "../pages/Donation/DonationDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
+
 const newRoute = createBrowserRouter([
     {
-      path: "/",
+    path: "/",
       errorElement: <ErrorPage></ErrorPage>,
       children: [
           {
               path: "/",
               element: <Home></Home>,
-              loader: ()=> fetch('/data.json')
+              loader: ()=> fetch('./data.json')
           },
           {
-            path: "Donation",
+            path: "/Donation",
             element: <Donation></Donation>
           },
           {
-            path: "Statistics",
+            path: "/Statistics",
             element: <Statistics></Statistics>,
-            loader: ()=> fetch('/data.json')
+            loader: ()=> fetch('./data.json')
           },
           {
-            path: "cards/:id",
+            path: "/cards/:id",
             element: <DonationDetails></DonationDetails>,
-            loader: ()=> fetch('/data.json')
+            loader: ()=> fetch('./data.json')
           }
       ]
   }])

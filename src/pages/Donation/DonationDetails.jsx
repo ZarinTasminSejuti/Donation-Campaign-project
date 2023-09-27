@@ -49,7 +49,7 @@ const DonationDetails = () => {
             {/* Donate Details of particular data section */}
             <div className="bg-cover mt-10 relative bg-no-repeat w-full h-[600px] rounded-lg mx-auto" style={{ backgroundImage: backgroundImageUrl }}>
 
-                <button style={{ backgroundColor: findCard.card_bg, color: findCard.text_color }} className=" px-7 py-4 rounded absolute bottom-9 left-9 z-10 text-white border-none normal-case" onClick={handleDonate} >Donate ${findCard.price}</button>
+                <button style={{ backgroundColor: findCard.text_color }} className=" px-7 py-4 rounded font-medium absolute bottom-9 left-9 z-10 text-white border-none normal-case" onClick={handleDonate} >Donate ${findCard.price}</button>
 
                 <div className="absolute bottom-0 rounded-lg hero-overlay h-32 bg-black bg-opacity-60"></div>
             </div>
